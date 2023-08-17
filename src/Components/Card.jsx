@@ -1,13 +1,19 @@
 import PropTypes from 'prop-types';
 
-const Card = (props) => {
+const Card = ({ cardDetails }) => {
     return (
         <>
-            <h2>Hola, soy una tarjeta 👋😀</h2>
+            <h2>{cardDetails.cardNumber}</h2>
+            <h3>{cardDetails.name}</h3>
+            <p>
+                {cardDetails.month}/{cardDetails.year}
+            </p>
         </>
     );
 };
 
-Card.propTypes = {};
+Card.propTypes = {
+    cardDetails: PropTypes.object,
+};
 
 export default Card;
