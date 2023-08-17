@@ -1,0 +1,11 @@
+.card {
+    margin-top: 2em;
+    max-width: 640px;
+    aspect-ratio: 1.8;
+    background-color: #6537e5;
+    border-radius: 10px;
+    background-image: url('src/assets/bg-card-front.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
