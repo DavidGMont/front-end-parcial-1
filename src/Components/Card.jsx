@@ -8,6 +8,7 @@ const Card = ({ cardDetails }) => {
             <p>
                 {cardDetails.month}/{cardDetails.year}
             </p>
+            <p>{cardDetails.cvc}</p>
         </>
     );
 };

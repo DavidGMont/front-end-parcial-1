@@ -11,8 +11,24 @@ function App() {
         cvc: 0,
     });
 
+    const [showCard, setShowCard] = useState(false);
+    const [showError, setShowError] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        if (
+            cardDetails.name.trim().length > 3 &&
+            cardDetails.cardNumber.toString().length >= 15 &&
+            cardDetails.cardNumber.toString().length <= 16 &&
+            cardDetails.year.toString().length < 3 &&
+            cardDetails.month.toString().length < 3 &&
+            cardDetails.cvc.toString().length < 4
+        ) {
+            setShowCard(true);
+            setShowError(false);
+        } else {
+            setShowError(true);
+        }
     };
 
     return (
@@ -82,7 +98,8 @@ function App() {
                 </fieldset>
                 <button type={'submit'}>Confirmar</button>
             </form>
-            <Card cardDetails={cardDetails} />
+            {showError ? <p>Por favor chequea que la información sea correcta</p> : null}
+            {showCard ? <Card cardDetails={cardDetails} /> : null}
         </>
     );
 }
