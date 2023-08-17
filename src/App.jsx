@@ -33,7 +33,7 @@ function App() {
 
     return (
         <>
-            <h1>Carga de estudiantes</h1>
+            <h1>100% Real, No Fake</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Nombre del tarjetahabiente:</label>
                 <input
