@@ -88,7 +88,7 @@ function App() {
                         type="number"
                         name="CVC"
                         id="cvc"
-                        max={99}
+                        max={999}
                         required={true}
                         placeholder={'Ej. 123'}
                         onChange={(e) =>
